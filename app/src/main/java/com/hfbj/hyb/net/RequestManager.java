@@ -21,8 +21,9 @@ public class RequestManager {
     private static DefaultHttpClient mHttpClient;
 
     static{
-        //mHttpClient = new DefaultHttpClient();
-        mRequestQueue = Volley.newRequestQueue(AppContext.getInstance()); //网络请求队列
+        mHttpClient = new DefaultHttpClient();
+        mRequestQueue = Volley.newRequestQueue(AppContext.getInstance(), new HttpClientStack(mHttpClient)); //网络请求队列
+      //  mRequestQueue = Volley.newRequestQueue(AppContext.getInstance()); //网络请求队列
     }
 
     /**
@@ -36,10 +37,10 @@ public class RequestManager {
         mRequestQueue.add(request);
     }
 
-//    public static void setCookie(String cookie){
-//        CookieStore cookieStore = mHttpClient.getCookieStore();
-//        cookieStore.addCookie(new BasicClientCookie("Cookie",cookie));
-//    }
+    public static void setCookie(String cookie){
+        CookieStore cookieStore = mHttpClient.getCookieStore();
+        cookieStore.addCookie(new BasicClientCookie("Cookie",cookie));
+    }
 
     /**
      * 销毁网络请求

@@ -15,7 +15,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.hfbj.hyb.R;
 
 import java.util.List;
@@ -59,10 +58,14 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     public static final int SUCCESS_TYPE = 2;
     public static final int WARNING_TYPE = 3;
     public static final int CUSTOM_IMAGE_TYPE = 4;
+    private OnSweetDismissed mDismissed;
 
     public static interface OnSweetClickListener {
         public void onClick(SweetAlertDialog sweetAlertDialog);
     }
+
+
+
 
     public SweetAlertDialog(Context context) {
         this(context, NORMAL_TYPE);
@@ -103,6 +106,9 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                if(mDismissed != null){
+                    mDismissed.onDismissed();
+                }
                 mDialogView.setVisibility(View.GONE);
                 mDialogView.post(new Runnable() {
                     @Override
@@ -110,6 +116,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
                         SweetAlertDialog.super.dismiss();
                     }
                 });
+
             }
 
             @Override
@@ -260,6 +267,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         return setContentText(getContext().getResources().getString(stringId));
     }
 
+
     public boolean isShowCancelButton() {
         return mShowCancel;
     }
@@ -314,6 +322,17 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     public void dismiss() {
         mDialogView.startAnimation(mScaleOutAnim);
     }
+
+    public void setOnSweetDismissed(OnSweetDismissed mDismissed){
+        this.mDismissed = mDismissed;
+    }
+
+
+    public static interface OnSweetDismissed {
+        public void onDismissed();
+    }
+
+
 
     @Override
     public void onClick(View v) {

@@ -6,12 +6,24 @@
     <string name="sign_faile_msg">请确认二维码是否有误或重试</string>
     <string name="sign_faile">签到失败</string>
     <string name="user_no">该用户未参加活动</string>
-    <string name="signing">正在签到</string>
-
+    <!-- <string name="signing">正在签到 <Data><![CDATA[<b>...</b>]]></Data></string> -->
+    <string name="signing">正在签到 <b>...</b></string>
+    <string name="paying">正在缴费 <b>...</b></string>
+    <string name="pay_failed">缴费失败</string>
+    <string name="retry">重试</string>
+    <string name="pay_fiale_msg">缴费信息已保存入缴费记录,可稍后在缴费记录同步数据或重试</string>
+    <string name="pay_succ">缴费成功</string>
+    <string name="pay_succ_msg">缴费成功，点击确定继续扫描</string>
     <string name="cancel">取消</string>
     <string name="sure">确定</string>
+    <string name="pay">缴纳会费</string>
+    <string name="pay_count">选择缴纳<Data><![CDATA[<font color="#DD6B55">%1$s</font>]]></Data>年,共<Data><![CDATA[<font color="#DD6B55">%2$s</font>]]></Data>元</string>
+    <string name="tieba_id">贴吧    ID：</string>
+    <string name="member_id">会员编号：</string>
+    <string name="member_fee">会员年费：</string>
+    <!-- <font color="#DD6B55">%1$;</font>年 -->
 
-
+    <string name="pay_line">已缴至<Data><![CDATA[<font color="#DD6B55">%1$s</font>]]></Data>年</string>
     <string name="app_name">汉服北京</string>
     <string name="login">登陆</string>
     <string name="button1">扫描</string>
@@ -30,5 +42,8 @@
     <string name="cat3">系统查询</string>
     <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
     <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
