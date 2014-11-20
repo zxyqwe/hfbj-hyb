@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity {
 
 
     public void login() {
-        executeRequest(new GsonRequest<String>(Request.Method.GET, UrlManager.formatUrl(UrlManager.LOGIN, ""), String.class, null, new Response.Listener<String>() {
+        executeRequest(new GsonRequest<String>(Request.Method.GET, UrlManager.formatUrl(UrlManager.LOGIN, "",""), String.class, null, new Response.Listener<String>() {
             @Override
             public void onResponse(String value) {
                 test();
