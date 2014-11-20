@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="scan_qrcode">扫描二维码</string>
+    <string name="sign_succ">签到成功</string>
+    <string name="sign_faile_msg">请确认二维码是否有误或重试</string>
+    <string name="sign_faile">签到失败</string>
+    <string name="user_no">该用户未参加活动</string>
+    <string name="signing">正在签到</string>
+
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+
+
+    <string name="app_name">汉服北京</string>
+    <string name="login">登陆</string>
+    <string name="button1">扫描</string>
+    <string name="title_activity_scan">扫描</string>
+    <string name="button2">会费缴费</string>
+    <string name="button3">刷新</string>
+    <string name="button4">会费误缴扣费</string>
+    <string name="baocun">保存并上传</string>
+    <string name="list">显示列表</string>
+    <string name="state">检查状态</string>
+    <string name="log">操作日志</string>
+    <string name="chart">统计数据</string>
+    <string name="renew">在线更新</string>
+    <string name="cat1">身份权限</string>
+    <string name="cat2">活动相关</string>
+    <string name="cat3">系统查询</string>
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+
+</resources>

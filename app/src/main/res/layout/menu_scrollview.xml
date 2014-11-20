@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cat1"
+            style="@style/MenuDrawer.Widget.Category" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cat2"
+            style="@style/MenuDrawer.Widget.Category" />
+
+        <Button
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/state"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/list"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <Button
+            android:id="@+id/baocun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/baocun"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cat3"
+            style="@style/MenuDrawer.Widget.Category"
+             />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <Button
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chart"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+        <Button
+            android:id="@+id/renew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/renew"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title" />
+
+    </LinearLayout>
+</ScrollView>

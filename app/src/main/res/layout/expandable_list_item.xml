@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slide="http://schemas.android.com/apk/res/com.tjerkw.slideexpandable.library"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Hello World"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/expandable_toggle_button"
+            style="@style/MenuDrawer.Widget.Category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/text"
+            android:text="更多"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonA"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="详细信息"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonB"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="移除"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
