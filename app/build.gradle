@@ -4,11 +4,11 @@ android {
     compileSdkVersion 18
     buildToolsVersion '19.1.0'
     defaultConfig {
-        applicationId "com.hfbj"
+        applicationId "com.hfbj.hyb"
         minSdkVersion 9
         targetSdkVersion 18
-        versionCode 1
-        versionName "1.0"
+        versionCode 15
+        versionName "3.0.0"
     }
     buildTypes {
         release {
@@ -24,7 +24,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':QRCodeReaderView-lib')
     compile project(':volley')
-    compile 'com.android.support:appcompat-v7:18.0.1'
+    compile 'com.android.support:appcompat-v7:21.0.0'
     compile 'com.jakewharton:butterknife:6.0.0'
     compile files('build/generated/source/r/debug/libs/gson-2.2.4.jar')
     compile files('libs/gson-2.2.4.jar')
