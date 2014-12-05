@@ -13,10 +13,18 @@ import android.view.View;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.hfbj.hyb.R;
+import com.hfbj.hyb.app.AppConfig;
 import com.hfbj.hyb.app.AppLogger;
+import com.hfbj.hyb.bean.MemberBean;
 import com.hfbj.hyb.net.GsonRequest;
 import com.hfbj.hyb.net.UrlManager;
 import com.hfbj.hyb.utils.AESHelper;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -45,18 +53,18 @@ public class MainActivity extends BaseActivity {
         mDrawerToggle = new DrawerListener(this, mDrawerLayout, R.string.app_name, R.string.app_name);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        String content = "liyanzhao";
+        String content = "li894768914     ";
         String password = "123456";
-        String encrypt = AESHelper.encrypt(content, password);
+        String encrypt = AESHelper.encrypt(content);
         AppLogger.e("加密后  " + encrypt);
-        AppLogger.e("解密后  " + AESHelper.decrypt(encrypt, password));
+        AppLogger.e("解密后  " + AESHelper.decrypt(encrypt));
 
         login();
     }
 
-
     public void login() {
-        executeRequest(new GsonRequest<String>(Request.Method.GET, UrlManager.formatUrl(UrlManager.LOGIN, "",""), String.class, null, new Response.Listener<String>() {
+        AppConfig.removeCookie();
+        executeRequest(new GsonRequest<String>(Request.Method.GET, UrlManager.formatUrl(UrlManager.LOGIN,"",""), String.class, null, new Response.Listener<String>() {
             @Override
             public void onResponse(String value) {
                 test();
@@ -64,11 +72,32 @@ public class MainActivity extends BaseActivity {
         }, null));
     }
 
-    public void test() {
-        executeRequest(new GsonRequest<String>(Request.Method.POST, UrlManager.formatUrl(UrlManager.INFO, ""), String.class, null, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String value) {
 
+//    public void login() {
+//        AppConfig.removeCookie();
+//        Map<String,String> params = new HashMap<String, String>();
+//        executeRequest(new GsonRequest<String>(Request.Method.POST, "http://app.hanbj.cn/hyb/app/login", String.class, params, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String value) {
+//                try {
+//                    JSONArray array = new JSONArray(value);
+//                    String v = (String) array.get(3);
+//                    AppLogger.e("获取后  " + v +"   " + v.trim());
+//
+//                    test();
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        }, null));
+//    }
+
+    public void test() {
+        executeRequest(new GsonRequest<MemberBean>(Request.Method.POST, UrlManager.formatUrl(UrlManager.INFO, "270"), MemberBean.class, null, new Response.Listener<MemberBean>() {
+            @Override
+            public void onResponse(MemberBean value) {
+                value.getGender();
             }
         }, null));
     }
